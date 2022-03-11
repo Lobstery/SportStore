@@ -1,0 +1,157 @@
+.navBar {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 10px 5px #fff;
+}
+.navBarTop {
+    background-color: #009fb3;
+    height: 50px;
+    margin: 0px 0px 5px 0px;
+}
+.navBarTopBody {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+.navBarLogo {
+    background-color: #009fb3;
+    grid-column: 2;
+    width: 200px;
+    height: 70px;
+    margin: 0 0 -20px 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navBarLinkLogo {
+    text-decoration: none;
+}
+
+.navBarTopLeft {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+}
+.navBarTopRigth {
+    grid-column: 3;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.navBarTopLink {
+    background-color: #009fb3;
+    color: white;
+    margin: 0 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+.navBarTopLink:hover {
+    background-color: #068292;
+}
+.navBarTopLink:active {
+    background-color: #035661;
+}
+.navBarBottomBody {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+.navBarBottomLeft {
+    grid-column: 1;
+}
+.navBarBottomRight {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+.navBarBottomLink {
+    color: #888;
+    margin: 0px 10px 0px 10px;
+    text-decoration: none;
+    padding: 0px 5px;
+    padding: 0 0 0 26px;
+    position: relative;
+}
+.navBarBottomLink::after {
+    transition: 0.2s;
+    position: absolute;
+    content: "";
+    left: calc(50% + 26px);
+    width: 0px;
+    height: 1px;
+    display: block;
+    background-color: #068292;
+}
+.navBarBottomLink:hover:after {
+    position: absolute;
+    content: "";
+    left: 26px;
+    width: calc(100% - 26px);
+    height: 1px;
+    display: block;
+    background-color: #068292;
+}
+.navBarBottomLink:hover {
+    color: #068292;
+}
+.navBarBasket {
+    margin: 0px 0px 0px 20px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    background: url("../../img/navbar/cart.png") center / cover no-repeat;
+    position: relative;
+    transition: 0.2s;
+}
+.navBarBasket:hover {
+    border: 4px solid #068292;
+}
+.navBarBasketCount {
+    position: absolute;
+    background-color: #f68038;
+    color: #fff;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 4px 6px;
+    right: -10px;
+    top: -5px;
+}
+.bottom1 {
+    background: url("../../img/navbar/key.png") 0 2px/20px 20px no-repeat;
+}
+.bottom1:hover {
+    background-image: url("../../img/navbar/key_hover.png");
+}
+.bottom2 {
+    background: url("../../img/navbar/user_admin.png") 0 2px/20px 20px no-repeat;
+}
+.bottom2:hover {
+    background-image: url("../../img/navbar/user_admin_hover.png");
+}
+.bottom3 {
+    background: url("../../img/navbar/user_reg.png") 0 2px/20px 20px no-repeat;
+}
+.bottom3:hover {
+    background-image: url("../../img/navbar/user_reg_hover.png");
+}
+.bottom4 {
+    background: url("../../img/navbar/user.png") 0 2px/20px 20px no-repeat;
+}
+.bottom4:hover {
+    background-image: url("../../img/navbar/user_hover.png");
+}
+.navBarCalendar {
+    color: #fff;
+    font-size: 12px;
+    margin: 0px 20px 0px 0px;
+    padding: 0px 0px 0px 38px;
+    background: url("../../img/navbar/calendar.png") 0 2px/30px 30px no-repeat;
+}

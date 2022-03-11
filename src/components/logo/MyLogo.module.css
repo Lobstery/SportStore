@@ -1,0 +1,14 @@
+.myLogoBody {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.myLogoBodyBlue {
+    color: #009fb3;
+}
+.myLogoLeft {
+    font-size: 53px;
+}
+.myLogoRight {
+    font-size: 20px;
+}
