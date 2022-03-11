@@ -1,0 +1,30 @@
+.myButton {
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.myButtonOrange {
+    background-color: #f68038;
+}
+.myButtonBlue {
+    background-color: #009fb3;
+}
+.myButtonGreen {
+    background-color: #34d383;
+}
+
+.myButtonOrange:hover {
+    background-color: #fcb183;
+}
+.myButtonBlue:hover {
+    background-color: #4babb8;
+}
+.myButtonGreen:hover {
+    background-color: #70d3a1;
+}
