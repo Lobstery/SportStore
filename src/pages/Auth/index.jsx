@@ -1,12 +1,10 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-import styles from './styles.module.scss'
 import Container from '../../components/UI/Container';
 import Card from '../../components/Card'
-import FormAuth from '../../components/FormAuth'
+import FormAuth from './Core/FormAuth'
 import { LOGIN_ROUTE } from '../../utils/consts'
-import { findByLabelText } from '@testing-library/react';
 
 const Auth = () => {
     const location = useLocation()

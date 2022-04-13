@@ -1,0 +1,28 @@
+.button {
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    &_orange {
+        background-color: #f68038;
+        &:hover {
+            background-color: #fcb183;
+        }
+    }
+    &_blue {
+        background-color: #009fb3;
+        &:hover {
+            background-color: #007a8a;
+        }
+    }
+    &_green {
+        background-color: #34d383;
+        &:hover {
+            background-color: #70d3a1;
+        }
+    }
+}
