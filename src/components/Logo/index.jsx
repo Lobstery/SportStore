@@ -11,16 +11,16 @@ const Logo = ({ color }) => {
 
     return (
         <div className={classNames(styles.myLogoBody, logoClasses[color])}>
-            <p className={styles.myLogoLeft}>S</p>
+            <span className={styles.myLogoLeft}>S</span>
             <div className={styles.myLogoRight}>
-                <p>port</p>
-                <p>tore</p>
+                <span>port</span>
+                <span>tore</span>
             </div>
         </div>
     );
 };
 
-MyLogo.defaultProps = {
+Logo.defaultProps = {
     color: 'default'
 }
 

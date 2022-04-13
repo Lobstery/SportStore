@@ -1,5 +1,5 @@
 .myButton {
-    padding: 10px;
+    padding: 5px 10px;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -23,7 +23,7 @@
     background-color: #fcb183;
 }
 .myButtonBlue:hover {
-    background-color: #4babb8;
+    background-color: #007a8a;
 }
 .myButtonGreen:hover {
     background-color: #70d3a1;

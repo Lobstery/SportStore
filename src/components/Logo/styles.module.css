@@ -1,14 +1,27 @@
 .myLogoBody {
     color: white;
     display: flex;
-    align-items: center;
+    height: 50px;
+    cursor: pointer;
 }
+
 .myLogoBodyBlue {
     color: #009fb3;
 }
+
 .myLogoLeft {
-    font-size: 53px;
+    font-size: 50px;
+    display: block;
+    height: 45px;
+    line-height: 50px;
 }
+
 .myLogoRight {
+    height: 50px;
+    line-height: 20px;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
