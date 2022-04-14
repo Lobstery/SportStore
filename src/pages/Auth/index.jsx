@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-import Container from '../../components/UI/Container';
+import Container from '../../components/Container';
 import Card from '../../components/Card'
 import FormAuth from './Core/FormAuth'
 import { LOGIN_ROUTE } from '../../utils/consts'

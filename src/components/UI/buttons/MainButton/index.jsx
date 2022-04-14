@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types'
+import classNames from 'classnames';
 
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 
-const MainButton = ({ click, children, ...props }) => {
-    const [classes, setClasses] = useState(styles.button);
+const MainButton = ({ click, addclass, children, ...props }) => {
+    const [classes, setClasses] = useState(classNames(styles.button, addclass));
 
     const onAddClass = classname => setClasses(prev => `${prev} ${classname}`);
 
@@ -17,11 +18,9 @@ const MainButton = ({ click, children, ...props }) => {
             {...props}
             onMouseLeave={() => {
                 onAddClass(styles.backeffect);
-                console.log("go");
             }}
             onMouseEnter={() => {
                 onDeleteClass(styles.backeffect);
-                console.log("back");
             }}
         >
             {children}

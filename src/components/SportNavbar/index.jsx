@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 import { SHOP_ROUTE, HOME_ROUTE, CONTACTS_ROUTE, LOGIN_ROUTE } from '../../utils/consts';
 import styles from './styles.module.scss'
-import Logo from '../Logo'
-import Container from '../UI/Container';
+import Logo from './Core/Logo'
+import Container from '../Container';
 import Rightnav from './Core/RightNav';
 
 const SoprtNavbar = () => {

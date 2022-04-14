@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 import styles from './styles.module.scss'
-import Button from '../../../../components/UI/buttons/Button'
+import MainButton from '../../../../components/UI/buttons/MainButton'
 import Form from '../../../../components/UI/Form'
 import Input from '../../../../components/UI/inputs/Input'
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../../../utils/consts'
@@ -20,15 +20,15 @@ const FormAuth = () => {
                 {isLogin ?
                     <div>
                         Don't have an account?
-                        <NavLink to={REGISTRATION_ROUTE} className={styles.link} children="Register" />
+                        <NavLink to={REGISTRATION_ROUTE} className={styles.link} children='Register' />
                     </div>
                     :
                     <div>
                         Have an account?
-                        <NavLink to={LOGIN_ROUTE} className={styles.link} children="Login" />
+                        <NavLink to={LOGIN_ROUTE} className={styles.link} children='Login' />
                     </div>
                 }
-                <Button color='orange' addclass={styles.button}>{isLogin ? "Authorization" : "Register"}</Button>
+                <MainButton color='orange' addclass={styles.button}>{isLogin ? 'Authorization' : 'Register'}</MainButton>
             </div >
         </Form >
     )

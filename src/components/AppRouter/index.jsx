@@ -6,6 +6,7 @@ import { publicRoutes, authRoutes } from '../../router/routes';
 import { HOME_ROUTE } from '../../utils/consts';
 
 const AppRouter = () => {
+
     const { user } = useContext(Context)
 
     return (

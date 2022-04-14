@@ -1,5 +1,6 @@
 .button {
-    background-color: rgb(235, 103, 55);
+    overflow: hidden;
+    background-color: #f68038;
     color: #fff;
     font-size: 14px;
     padding: 10px 10px;
@@ -10,45 +11,44 @@
     letter-spacing: 1px;
     transition: 0.1s;
     position: relative;
+    border-radius: 5px;
+    &:hover {
+        background-color: #ff9756;
+    }
+    
+    &:active {
+        background-color: #fcb183;
+    }
+    
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translate(-50%);
+        width: calc(100% - 8px);
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+    
+    &::before {
+        top: 4px;
+    }
+    
+    &::after {
+        bottom: 4px;
+    }
+    &:hover::before {
+        animation: go1 1s;
+        animation-fill-mode: forwards;
+    }
+    
+    &:hover::after {
+        animation: go2 1s;
+        animation-fill-mode: forwards;
+    }
 }
-
-.button:hover {
-    background-color: rgb(190, 86, 49);
-}
-
-.button:active {
-    background-color: rgb(253, 148, 109);
-}
-
-.button::before,
-.button::after {
-    position: absolute;
-    content: "";
-    left: 50%;
-    transform: translate(-50%);
-    width: calc(100% - 8px);
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    transition: 0.3s;
-}
-
-.button::before {
-    top: 4px;
-}
-
-.button::after {
-    bottom: 4px;
-}
-.button:hover::before {
-    animation: go1 1s;
-    animation-fill-mode: forwards;
-}
-
-.button:hover::after {
-    animation: go2 1s;
-    animation-fill-mode: forwards;
-}
-
 .backeffect:before {
     animation: back1 1s;
     animation-fill-mode: forwards;
@@ -58,6 +58,8 @@
     animation: back2 1s;
     animation-fill-mode: forwards;
 }
+
+
 
 @keyframes go1 {
     0% {

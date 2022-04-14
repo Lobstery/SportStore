@@ -1,10 +1,18 @@
 import React from 'react';
 
+import Container from '../../components/Container'
+import TypeBar from './Core/TypeBar'
+import styles from './styles.module.scss'
+
 const Shop = () => {
     return (
-        <div>
-            Shop
-        </div>
+        <Container>
+            <div className={styles.shop}>
+                <asside className={styles.shop_asside}>
+                    <TypeBar />
+                </asside>
+            </div>
+        </Container >
     );
 };
 

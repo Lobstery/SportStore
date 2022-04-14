@@ -3,13 +3,18 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .link{
     text-decoration: none;
     color: #f68038;
     font-weight: 700;
     margin-left: 10px;
+    &:hover{
+        color: #fcb183;
+    }
 }
+
 .button{
     width: 200px;
-    height: 45px;;
+    height: 45px;
 }
