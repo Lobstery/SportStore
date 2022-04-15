@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Container } from '../../components/Container';
+
 const Brand = () => {
     return (
-        <div>
+        <Container>
             Brands
-        </div>
+        </Container>
     );
 };
 

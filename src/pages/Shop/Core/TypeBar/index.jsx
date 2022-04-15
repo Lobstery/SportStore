@@ -8,7 +8,7 @@ import styles from './styles.module.scss'
 const TypeBar = () => {
     const { product } = useContext(Context)
     const [isTypesActive, setIsTypesActive] = new useState(false);
-
+    const [activeType, setActiveType] = new useState(product.selectedType);
     const isactive = {
         true: styles.active,
         false: "",
@@ -26,9 +26,14 @@ const TypeBar = () => {
             </div>
             <div className={classNames(styles.list__typeslist, isactive[isTypesActive])}>
                 {
-                    product.types.map(type => <Button addclass={styles.list__row} key={type.id} >
-                        {type.name}
-                    </Button>)
+                    product.types.map(type =>
+                        <Button
+                            color={type.id == activeType.id ? "orange" : "blue"}
+                            click={() => { product.setSelectedType(type); setActiveType(type) }}
+                            addclass={styles.list__row}
+                            key={type.id}>
+                            {type.name}
+                        </Button>)
                 }
             </div>
         </div>

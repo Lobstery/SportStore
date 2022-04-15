@@ -1,0 +1,38 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20px;
+    h2{
+        color: #009fb3;
+        font-weight: 700;
+    }
+    &_brand{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-size: 18px;
+            font-weight: 700;
+            color: #f68038;
+        }
+        img{
+            width: 50%;
+        }
+    }
+    &_category{
+        display: flex;
+        align-items: center;
+        &_name{
+            color: #009fb3;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &_subcategory{
+            color: #f68038;
+            font-size: 18px;
+            margin-left: 10px;
+            font-style: italic;
+        }
+    }
+}

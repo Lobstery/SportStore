@@ -1,0 +1,20 @@
+.bar{
+    width: 140px;
+    height: 25px;
+    position: relative;
+    background-color: #ddd;
+    div{
+        position: relative;
+        z-index: 1;
+        background: url('../../img/ratingbar/starbar.png') center/cover no-repeat;
+        width: inherit;
+        height: inherit;
+    }
+    span{
+        top: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+        background-color: #f68038;
+    }
+}

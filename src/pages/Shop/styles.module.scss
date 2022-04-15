@@ -1,7 +1,11 @@
 .shop{
     display: flex;
-    padding-top: 20px;
-    &_asside{
+    padding-top: 40px;
+    &__asside{
         flex: 0 0 250px;
+        margin-right: 20px;
+    }
+    &__main>div:nth-child(2) {
+        margin-top: 20px;
     }
 }
