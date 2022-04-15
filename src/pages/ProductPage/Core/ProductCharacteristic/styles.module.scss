@@ -1,0 +1,17 @@
+.description{
+    display: flex;
+    background-color: #eee;
+    padding: 8px;
+    &__title{
+        word-wrap: break-word;
+        font-weight: 700;
+        flex: 0 0 140px;
+    }
+    &__description{
+        padding: 0 0 0 10px;
+        flex: 0 0 calc(100% - 140px);
+    }
+    &.odd{
+        background-color: #fff;
+    }
+}

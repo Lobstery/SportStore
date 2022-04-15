@@ -8,7 +8,7 @@ import Logo from './Core/Logo'
 import Container from '../Container';
 import Rightnav from './Core/RightNav';
 
-const SoprtNavbar = () => {
+const SoprtNavbar = ({ isAuth, setIsAuth }) => {
     return (
         <header className={styles.header}>
             <Container>
@@ -23,7 +23,7 @@ const SoprtNavbar = () => {
                         <div className={styles.header__logo_decoration}></div>
                         <Logo></Logo>
                     </div>
-                    <Rightnav classname={styles.header__top_right}></Rightnav>
+                    <Rightnav isAuth={isAuth} setIsAuth={setIsAuth} classname={styles.header__top_right}></Rightnav>
                 </div>
             </Container>
         </header >

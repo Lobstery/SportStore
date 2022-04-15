@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+
+import Container from '../../components/Container'
 
 const Admin = () => {
     return (
-        <div>
+        <Container>
             Admin
-        </div>
-    );
-};
+        </Container>
+    )
+}
 
-export default Admin;
+export default Admin

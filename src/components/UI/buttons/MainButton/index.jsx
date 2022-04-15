@@ -29,7 +29,6 @@ const MainButton = ({ click, addclass, children, ...props }) => {
 };
 
 MainButton.propTypes = {
-    click: PropTypes.func.isRequired,
     children: PropTypes.node
 }
 
