@@ -4,9 +4,10 @@ import Basket from '../pages/Basket'
 import Shop from '../pages/Shop'
 import ProductPage from '../pages/ProductPage'
 import Home from '../pages/Home'
-import { ADMIN_ROUTE, BASKET_ROUTE, CONTACTS_ROUTE, HOME_ROUTE, LOGIN_ROUTE, PRODUCT_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, USER_ROUTE } from '../utils/consts'
+import { ADMIN_ROUTE, BASKET_ROUTE, BRAND_ROUTE, CONTACTS_ROUTE, HOME_ROUTE, LOGIN_ROUTE, PRODUCT_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, USER_ROUTE } from '../utils/consts'
 import UserInfo from '../pages/UserInfo'
 import Contacts from '../pages/Contacts'
+import Brand from '../pages/Brand'
 
 export const authRoutes = [
     {
@@ -38,6 +39,10 @@ export const publicRoutes = [
     {
         path: HOME_ROUTE,
         element: <Home />,
+    },
+    {
+        path: BRAND_ROUTE,
+        element: <Brand />,
     },
     {
         path: CONTACTS_ROUTE,

@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './styles.module.scss'
 
-const Button = ({ click, children, addclass, color, props }) => {
+const Button = ({ click, children, className, color, props }) => {
 
     const btnClasses = {
         orange: styles.button_orange,
@@ -12,7 +12,7 @@ const Button = ({ click, children, addclass, color, props }) => {
     }
 
     return (
-        <button className={classNames(styles.button, btnClasses[color], addclass)}  {...props} onClick={click}>
+        <button className={classNames(styles.button, btnClasses[color], className)}  {...props} onClick={click}>
             {children}
         </button>
     )
@@ -20,7 +20,7 @@ const Button = ({ click, children, addclass, color, props }) => {
 
 Button.defaultProps = {
     color: 'blue',
-    addclass: ''
+    className: ''
 }
 
 export default Button

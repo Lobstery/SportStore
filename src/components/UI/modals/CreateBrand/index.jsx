@@ -6,24 +6,24 @@ import styles from '../styles.module.scss'
 import Input from '../../inputs/Input'
 import Card from '../../../Card'
 import Button from '../../buttons/Button'
-import { createType } from '../../../../http/productAPI'
+import { createBrand } from '../../../../http/productAPI'
 
-const CreateType = ({ show, onHide }) => {
+const CreateBrand = ({ show, onHide }) => {
     const [value, setValue] = new useState('')
-    const addType = (e) => {
+
+    const addBrand = (e) => {
         e.preventDefault()
-        createType({ name: value }).then(data => setValue(''))
+        createBrand({ name: value }).then(data => setValue(''))
         onHide(false)
     }
 
     return (
-        <div
-            className={classNames(styles.addtype, show ? styles.active : "")}
+        <div className={classNames(styles.addtype, show ? styles.active : "")}
             onClick={(e) => {
                 if (e.currentTarget === e.target) onHide(false)
-            }} >
-            <Card width={600} className={styles.addtype__card} >
-                <p className={styles.addtype__title}>Add Type</p>
+            }}>
+            <Card width={600} className={styles.addtype__card}>
+                <p className={styles.addtype__title}>Add Brand</p>
                 <Button
                     click={() => onHide(false)}
                     color='orange'
@@ -31,22 +31,18 @@ const CreateType = ({ show, onHide }) => {
                     children={'×'}>
                 </Button>
                 <Form className={styles.addtype__form}>
-                    <p className={styles.addtype__form_inputtitle}>Type Name</p>
-                    <Input value={value} setValue={setValue} placeholder="Add type..." />
+                    <p className={styles.addtype__form_inputtitle}>Brand Name</p>
+                    <Input value={value} setValue={setValue} placeholder="Add brand..." />
                     <hr />
-                    <Button
-                        click={e => addType(e)}
-                        className={styles.addtype__form_button}
-                        children="Add type"
-                    />
+                    <Button click={e => addBrand(e)} className={styles.addtype__form_button} children="Add brand" />
                 </Form>
             </Card>
         </div >
     )
 }
 
-CreateType.defaultProps = {
+CreateBrand.defaultProps = {
     show: false,
 }
 
-export default CreateType
+export default CreateBrand

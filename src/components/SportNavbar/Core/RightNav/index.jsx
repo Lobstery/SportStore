@@ -11,6 +11,13 @@ const RightNav = ({ isAuth, setIsAuth, classname }) => {
     const { user } = useContext(Context)
     const navigate = useNavigate()
 
+    const logOut = () => {
+        user.setUser({})
+        user.setIsAuth(false)
+        setIsAuth(false)
+        navigate(LOGIN_ROUTE)
+    }
+
     return (
         <>
             {isAuth
@@ -20,23 +27,14 @@ const RightNav = ({ isAuth, setIsAuth, classname }) => {
                         Admin Panel
                     </Button>
                     <Button
-                        click={() => {
-                            user.setIsAuth(false)
-                            setIsAuth(user.isAuth)
-                            console.log(isAuth)
-                            navigate(LOGIN_ROUTE)
-                        }}>
+                        click={() => { logOut() }}>
                         Log out
                     </Button>
                 </nav>
                 :
                 <nav className={classNames(classname, styles.rightnav)}>
                     <Button
-                        click={() => {
-                            user.setIsAuth(true)
-                            console.log(isAuth)
-                            setIsAuth(user.isAuth)
-                        }}>
+                        click={() => { navigate(LOGIN_ROUTE) }}>
                         Authorization
                     </Button>
                 </nav>

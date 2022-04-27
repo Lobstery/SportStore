@@ -4,14 +4,14 @@ import Button from '../../../../components/UI/buttons/Button'
 import styles from './styles.module.scss'
 import { Context } from '../../../..'
 import ProductItem from '../ProductItem';
+import classNames from 'classnames';
 
-const ProductList = () => {
-    const { product } = useContext(Context)
+const ProductList = ({ products, className }) => {
 
     return (
-        <div className={styles.list}>
+        <div className={classNames(styles.list, className)}>
             {
-                product.products.map(prod =>
+                products.map(prod =>
                     <ProductItem key={prod.id} product={prod} />
                 )
             }

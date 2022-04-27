@@ -1,0 +1,14 @@
+.dropdown{
+    border: 2px solid #ddd;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    color: gray;
+    &.is_selected{
+        color: black;
+    }
+    &__item{
+        color: black;
+    }
+}

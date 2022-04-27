@@ -1,14 +1,16 @@
 .item{
     cursor: pointer;
-    width: 200px;
-    height: 290px;
+    width: 205px;
+    height: 325px;
     padding: 10px;
-    border: 2px solid #009fb3;
+    border: 2px solid #ddd;
     border-radius: 0px 5px 0px 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     transition: 0.3s;
+    box-shadow: 5px 5px 5px #ddd;
+    margin: 0 8px;
     &:hover{
         border-radius: 0px;
         .item__img{
@@ -16,9 +18,10 @@
         }
     }
     &__img{
-        max-width: 180px;
-        max-height: 180px;
+        width: 180px;
+        height: 180px;
         border-radius: 5px;
+
     }
     &__title{
         margin-top: 5px;

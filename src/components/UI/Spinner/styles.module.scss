@@ -1,0 +1,52 @@
+.body{
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.bigspin{
+    animation: spinLeft 3s infinite linear;
+    border-top: 10px solid #009fb3;
+    border-left: 10px solid #009fb3;
+    border-right: 10px solid #009fb3;
+    border-bottom: 10px solid #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.mediumspin{
+    animation: spinLeft 3s infinite linear;
+    border-bottom: 10px solid #007a8a;
+    border-left: 10px solid #007a8a;
+    border-right: 10px solid #007a8a;
+    border-top: 10px solid #fff;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.smallspin{
+    animation: spinLeft 5s infinite linear;
+    border-bottom: 10px solid #009fb3;
+    border-left: 10px solid #009fb3;
+    border-top: 10px solid #009fb3;
+    border-right: 10px solid #fff;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 50%;
+}
+@keyframes spinLeft{
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

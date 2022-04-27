@@ -1,13 +1,23 @@
-import React from 'react';
+import classNames from 'classnames'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import styles from './style.module.scss'
+import { BRAND_ROUTE, CONTACTS_ROUTE, HOME_ROUTE, SHOP_ROUTE } from '../../../../utils/consts'
+import styles from './styles.module.scss'
 
-const LeftNav = () => {
+const LeftNav = ({ className }) => {
     return (
-        <div>
+        <nav className={classNames(styles.leftnav, className)}>
+            <NavLink className={styles.leftnav__link} to={HOME_ROUTE}>Home</NavLink>
+            <NavLink className={styles.leftnav__link} to={CONTACTS_ROUTE}>Contacts</NavLink>
+            <NavLink className={styles.leftnav__link} to={SHOP_ROUTE}>Shop</NavLink>
+            <NavLink className={styles.leftnav__link} to={BRAND_ROUTE}>Brands</NavLink>
+        </nav>
+    )
+}
 
-        </div>
-    );
-};
+LeftNav.defaultProps = {
+    className: ""
+}
 
-export default LeftNav;
+export default LeftNav

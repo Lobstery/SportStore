@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './styles.module.scss'
 
-const Form = ({ children, color, props }) => {
+const Form = ({ className, children, color, props }) => {
 
     const classes = {
         none: "",
@@ -13,14 +13,15 @@ const Form = ({ children, color, props }) => {
     }
 
     return (
-        <form className={classNames(styles.form, classes[color])}  {...props}>
+        <form className={classNames(styles.form, classes[color], className)}  {...props}>
             {children}
         </form>
     )
 }
 
 Form.defaultProps = {
-    color: 'none'
+    color: 'none',
+    className: '',
 }
 
 export default Form

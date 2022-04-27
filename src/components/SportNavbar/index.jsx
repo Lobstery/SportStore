@@ -7,18 +7,14 @@ import styles from './styles.module.scss'
 import Logo from './Core/Logo'
 import Container from '../Container';
 import Rightnav from './Core/RightNav';
+import LeftNav from './Core/LeftNav';
 
 const SoprtNavbar = ({ isAuth, setIsAuth }) => {
     return (
         <header className={styles.header}>
             <Container>
                 <div className={styles.header__top}>
-                    <nav className={classNames(styles.header__top_left, styles.leftnav)}>
-                        <NavLink className={styles.leftnav__link} to={HOME_ROUTE}>Home</NavLink>
-                        <NavLink className={styles.leftnav__link} to={CONTACTS_ROUTE}>Contacts</NavLink>
-                        <NavLink className={styles.leftnav__link} to={SHOP_ROUTE}>Shop</NavLink>
-                        <NavLink className={styles.leftnav__link} to={LOGIN_ROUTE}>Auth</NavLink>
-                    </nav>
+                    <LeftNav className={styles.header__top_left} />
                     <div className={styles.header__logo}>
                         <div className={styles.header__logo_decoration}></div>
                         <Logo></Logo>

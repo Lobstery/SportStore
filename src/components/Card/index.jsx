@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './styles.module.scss'
 
-const Card = ({ children, color, width, props }) => {
+const Card = ({ className, children, color, width, props }) => {
 
     const classes = {
         none: "",
@@ -13,7 +13,7 @@ const Card = ({ children, color, width, props }) => {
     }
 
     return (
-        <div className={classNames(styles.default, classes[color])} style={{ width: width }}  {...props}>
+        <div className={classNames(styles.default, classes[color], className)} style={{ width: width }}  {...props}>
             {children}
         </div>
     )
@@ -22,6 +22,7 @@ const Card = ({ children, color, width, props }) => {
 Card.defaultProps = {
     color: 'none',
     width: 200,
+    className: '',
 }
 
 export default Card

@@ -5,7 +5,15 @@
         flex: 0 0 250px;
         margin-right: 20px;
     }
-    &__main>div:nth-child(2) {
+    &__main {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        &>div:nth-child(2){
         margin-top: 20px;
+        }
+    }
+    &__prodlist{
+        flex: 1 1 auto;
     }
 }

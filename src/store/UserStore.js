@@ -6,7 +6,7 @@ export default class UserStore {
     setIsAuth(param) {
         this._isAuth = param
     }
-    setIsUser(user) {
+    setUser(user) {
         this._user = user
     }
     get isAuth() {

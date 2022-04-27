@@ -5,7 +5,7 @@ import Button from '../../../../components/UI/buttons/Button'
 import { Context } from '../../../..'
 import styles from './styles.module.scss'
 
-const BrandBar = () => {
+const BrandBar = ({ brands }) => {
     const { product } = useContext(Context)
     const [isActive, setIsActive] = new useState(product.selectedBrand);
 
@@ -15,11 +15,17 @@ const BrandBar = () => {
                 product.brands.map(brand =>
                     <Button
                         click={() => {
-                            product.setSelectedBrand(brand)
-                            setIsActive(brand)
+                            if (product.selectedBrand.id != brand.id) {
+                                product.setSelectedBrand(brand)
+                                setIsActive(brand)
+                            }
+                            else {
+                                product.setSelectedBrand({})
+                                setIsActive({})
+                            }
                         }}
                         key={brand.id}
-                        addclass={classNames(styles.list__button, isActive.id === brand.id && styles.active)} >
+                        className={classNames(styles.list__button, isActive.id === brand.id && styles.active)} >
                         {
                             brand.name
                         }

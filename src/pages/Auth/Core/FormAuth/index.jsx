@@ -7,15 +7,14 @@ import Form from '../../../../components/UI/Form'
 import Input from '../../../../components/UI/inputs/Input'
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../../../utils/consts'
 
-const FormAuth = () => {
-
+const FormAuth = ({ click, email, setEmail, password, setPassword }) => {
     const location = useLocation()
     const isLogin = location.pathname == LOGIN_ROUTE
 
     return (
         <Form>
-            <Input placeholder='Email...' />
-            <Input placeholder='Password...' />
+            <Input placeholder='Email...' value={email} setValue={setEmail} />
+            <Input type='password' placeholder='Password...' value={password} setValue={setPassword} />
             <div className={styles.bottom}>
                 {isLogin ?
                     <div>
@@ -28,7 +27,7 @@ const FormAuth = () => {
                         <NavLink to={LOGIN_ROUTE} className={styles.link} children='Login' />
                     </div>
                 }
-                <MainButton color='orange' addclass={styles.button}>{isLogin ? 'Authorization' : 'Register'}</MainButton>
+                <MainButton click={e => click(e)} color='orange' addclass={styles.button}>{isLogin ? 'Authorization' : 'Register'}</MainButton>
             </div >
         </Form >
     )
