@@ -14,6 +14,11 @@ const Shop = () => {
     const [types, setTypes] = useState([])
     const [brands, setBrands] = useState([])
     const [products, setProducts] = useState([])
+    const [totalCount, setTotalCount] = useState(0)
+    const [activePage, setActivePage] = useState(product.page)
+    const [activeBrand, setActiveBrand] = new useState(product.selectedBrand)
+    const [activeType, setActiveType] = new useState(product.selectedType)
+
 
     useEffect(() => {
         fetchTypes().then(data => {
@@ -24,22 +29,33 @@ const Shop = () => {
             product.setBrands(data)
             setBrands(data)
         })
-        fetchProducts().then(data => {
+        fetchProducts(null, null, 2, 3).then(data => {
             product.setProducts(data.rows)
             setProducts(data.rows)
+            product.setTotalCount(data.count)
+            setTotalCount(data.count)
         })
     }, [])
+
+    useEffect(() => {
+        fetchProducts(activeBrand.id, activeType.id, activePage, 3).then(data => {
+            product.setProducts(data.rows)
+            setProducts(data.rows)
+            product.setTotalCount(data.count)
+            setTotalCount(data.count)
+        })
+    }, [activePage, activeType, activeBrand])
 
     return (
         <Container>
             <div style={{ minHeight: window.innerHeight - 50 }} className={styles.shop}>
                 <div className={styles.shop__asside}>
-                    <TypeBar types={types} />
+                    <TypeBar setActivePage={setActivePage} activeType={activeType} setActiveType={setActiveType} types={types} />
                 </div>
                 <main className={styles.shop__main}>
-                    <BrandBar brands={brands} />
+                    <BrandBar setActivePage={setActivePage} isActive={activeBrand} setIsActive={setActiveBrand} brands={brands} />
                     <ProductList className={styles.shop__prodlist} products={products} />
-                    <Pages />
+                    <Pages activePage={activePage} setActivePage={setActivePage} totalCount={totalCount} />
                 </main>
             </div>
         </Container>

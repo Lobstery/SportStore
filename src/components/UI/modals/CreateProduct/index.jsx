@@ -46,7 +46,6 @@ const CreateProduct = ({ show, onHide }) => {
     }
 
     const addProduct = (e) => {
-        console.log(info)
         e.preventDefault()
         const formData = new FormData()
         formData.append('name', name)

@@ -5,23 +5,24 @@ import Button from '../../../../components/UI/buttons/Button'
 import { Context } from '../../../..'
 import styles from './styles.module.scss'
 
-const BrandBar = ({ brands }) => {
+const BrandBar = ({ setActivePage, brands, isActive, setIsActive }) => {
     const { product } = useContext(Context)
-    const [isActive, setIsActive] = new useState(product.selectedBrand);
 
     return (
         <div className={styles.list}>
             {
-                product.brands.map(brand =>
+                brands.map(brand =>
                     <Button
                         click={() => {
                             if (product.selectedBrand.id != brand.id) {
                                 product.setSelectedBrand(brand)
                                 setIsActive(brand)
+                                setActivePage(1)
                             }
                             else {
                                 product.setSelectedBrand({})
                                 setIsActive({})
+                                setActivePage(1)
                             }
                         }}
                         key={brand.id}

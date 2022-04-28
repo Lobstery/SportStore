@@ -5,10 +5,9 @@ import Button from '../../../../components/UI/buttons/Button'
 import { Context } from '../../../..'
 import styles from './styles.module.scss'
 
-const TypeBar = ({ types }) => {
+const TypeBar = ({ setActivePage, types, activeType, setActiveType }) => {
     const { product } = useContext(Context)
-    const [isTypesActive, setIsTypesActive] = new useState(true);
-    const [activeType, setActiveType] = new useState(product.selectedType);
+    const [isTypesActive, setIsTypesActive] = new useState(true)
     const isactive = {
         true: styles.active,
         false: "",
@@ -34,10 +33,12 @@ const TypeBar = ({ types }) => {
                                 if (type.id != product.selectedType.id) {
                                     product.setSelectedType(type)
                                     setActiveType(type)
+                                    setActivePage(1)
                                 }
                                 else {
                                     product.setSelectedType({})
                                     setActiveType({})
+                                    setActivePage(1)
                                 }
                             }}
                             className={styles.list__row}
