@@ -9,6 +9,7 @@
         background: url('../../img/ratingbar/starbar.png') center/cover no-repeat;
         width: inherit;
         height: inherit;
+        cursor: pointer;
     }
     span{
         top: 0;
@@ -16,5 +17,9 @@
         display: block;
         position: absolute;
         background-color: #f68038;
+        transition: 0.2s;
+        &.active{
+        background-color: #009fb3;
+        }
     }
 }

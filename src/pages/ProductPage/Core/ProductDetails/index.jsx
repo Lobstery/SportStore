@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from './styles.module.scss'
 import RatingBar from '../../../../components/RatingBar'
 import classNames from 'classnames';
 
-const ProductDetails = ({ product, className }) => {
+const ProductDetails = ({product, className}) => {
     return (
         <div className={classNames(styles.details, className)}>
             <h2>{product.name}</h2>
@@ -16,13 +16,15 @@ const ProductDetails = ({ product, className }) => {
                 <span>BrandName</span>
                 <img src="https://megamoll.by/upload/iblock/6ea/6eac21b8a46621dd61c8df37403052ff.png" />
             </div>
-            <RatingBar rate={product.rating} height={35} />
+            <RatingBar enabled={true} height={35} productId={product.id} />
         </div>
     );
 };
 
 ProductDetails.defaultProps = {
     addClass: "",
+    product: {},
+    rating: 0
 }
 
 export default ProductDetails

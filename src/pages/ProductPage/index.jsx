@@ -7,7 +7,7 @@ import ProductDetails from './Core/ProductDetails'
 import Button from '../../components/UI/buttons/Button'
 import ProductCharacteristic from './Core/ProductCharacteristic'
 import { REACT_APP_API_URL } from '../../utils/consts'
-import { fetchOneProduct } from '../../http/productAPI'
+import { fetchOneProduct, fetchOneProductRating } from '../../http/productAPI'
 
 const ProductPage = () => {
     const [product, setProduct] = useState({ img: '', info: [] })

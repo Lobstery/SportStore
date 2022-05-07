@@ -3,12 +3,13 @@ import classNames from 'classnames'
 
 import styles from './styles.module.scss'
 
-const Input = ({ placeholder, props, type, className, value, setValue, setCharacteristic }) => {
+const Input = ({autoComplete, placeholder, type, className, value, setValue, setCharacteristic, props }) => {
 
     const [isFocus, setIsFocus] = useState()
 
     return (
         <input
+        autoComplete={autoComplete}
             value={value}
             type={type}
             placeholder={placeholder}

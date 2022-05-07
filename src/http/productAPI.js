@@ -39,6 +39,20 @@ export const fetchOneProduct = async (id) => {
     return data
 }
 
+export const createRating = async (rating) => {
+    const { data } = await $host.post('api/rating', rating)
+    return data
+}
+
+export const fetchOneProductRating = async (id) => {
+    const { data } = await $host.get('api/rating', {
+        params: {
+           id
+        }
+    })
+    return data
+}
+
 
 
 

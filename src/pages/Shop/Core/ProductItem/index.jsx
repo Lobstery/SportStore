@@ -18,7 +18,7 @@ const ProductItem = ({ product }) => {
                 <button className={styles.item__cart}></button>
                 <span className={styles.item__price}>{product.price + " MDL"}</span>
             </div>
-            <RatingBar rate={product.rating}></RatingBar>
+            <RatingBar productId={product.id}></RatingBar>
         </div >
     );
 };

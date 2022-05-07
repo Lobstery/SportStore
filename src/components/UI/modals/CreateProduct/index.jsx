@@ -37,7 +37,6 @@ const CreateProduct = ({ show, onHide }) => {
     }
 
     const selectFile = e => {
-        console.log(e.target.files[0])
         setFile(e.target.files[0])
     }
 

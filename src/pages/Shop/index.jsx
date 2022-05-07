@@ -19,7 +19,6 @@ const Shop = () => {
     const [activeBrand, setActiveBrand] = new useState(product.selectedBrand)
     const [activeType, setActiveType] = new useState(product.selectedType)
 
-
     useEffect(() => {
         fetchTypes().then(data => {
             product.setTypes(data)

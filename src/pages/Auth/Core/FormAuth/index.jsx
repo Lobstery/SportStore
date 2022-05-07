@@ -13,8 +13,8 @@ const FormAuth = ({ click, email, setEmail, password, setPassword }) => {
 
     return (
         <Form>
-            <Input placeholder='Email...' value={email} setValue={setEmail} />
-            <Input type='password' placeholder='Password...' value={password} setValue={setPassword} />
+            <Input placeholder='Email...' autoComplete="current-email" value={email} setValue={setEmail} />
+            <Input type='password' autoComplete="current-password" placeholder='Password...' value={password} setValue={setPassword} />
             <div className={styles.bottom}>
                 {isLogin ?
                     <div>
